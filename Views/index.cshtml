@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Anagrams!</title>
+    <link rel="stylesheet" href="Content/css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="Content/css/styles.css" type="text/css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="well">
+        <h1>Coin Combo!</h1>
+        <p>
+          Enter an amount below 100 in the form below, press submit and see how many of each coin it will take to make change!
+        </p>
+        <form action="/result" method="post">
+          <div class="form-group">
+            <label for="amount">Amount $0.</label>
+            <input type="text" name="user-amount" placeholder="00">
+          </div>
+          <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+        @if (Model != null)
+        {
+          <p>Quarters: @Model.numQuarters</p>
+          <p>Dimes: @Model.numDimes</p>
+          <p>Nickels: @Model.numNickles</p>
+          <p>Penies: @Model.numPennies</p>
+        }
+      </div>
+    </div>
+  </body>
+</html>
